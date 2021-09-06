@@ -1,34 +1,19 @@
-import logo from './logo.svg';
+
+import React from 'react';
 import './App.css';
-import { Component } from 'react';
 
 
-class App extends Component {
+class App extends React.Component {
   state = {
     name: 'Vinicius Gomez',
     counter: 0 
   };
-
-  Click = () => {
-    this.setState({ name: 'Yeah'});
-  }
-
-  Clicker = (event) => {
-    event.preventDefault();
-    const { counter } = this.state;
-    this.setState({ counter: counter + 1})
-  }
 
   render() {
     const { name, counter }  = this.state;
     
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p onClick={this.Click} > {name}, {counter}</p>
-          <a onClick={this.Clicker} className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">React.js</a>
-        </header>
       </div>
     );
   }
