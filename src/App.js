@@ -25,10 +25,11 @@ class App extends React.Component {
   };
 
   render() {
-    const { name, counter }  = this.state;
+    const { posts }  = this.state;
     
     return (
       <div className="App">
+        {posts.map(post => <h1>{post.title}</h1>)}
       </div>
     );
   }
